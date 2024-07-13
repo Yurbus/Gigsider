@@ -1,0 +1,236 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul, ol {
+  padding: 0;
+}
+ul li, ol li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  background-color: #FFFFFF;
+  line-height: 1.1;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  height: 100%;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+/*----- для модалок ----*/
+body.lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/*---------------------------*/
+[class*=__container] {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+html, body {
+  height: 100%;
+}
+
+/*---------------------------*/
+.page {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 44px;
+  height: 44px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid #fff;
+  text-decoration: none;
+  border-radius: 64px;
+}
+
+
+
+/*----------------------------------------------------------------------------------------*/
+/*------------------------------ Media query ---------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 959.98px) {
+  /*-------- Mobile menu style ---------*/
+  .menu__icon {
+    display: block;
+    z-index: 5;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+    top: 32px;
+    border-radius: 4px;
+    background: #0060FF;
+  }
+  .menu__icon span {
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    height: 1px;
+    width: 14px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    border-radius: 2px;
+  }
+  .menu__icon::before, .menu__icon::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    left: 7px;
+    height: 1px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    border-radius: 2px;
+  }
+  .menu__icon::before {
+    top: 14px;
+  }
+  .menu__icon::after {
+    bottom: 7px;
+  }
+  .menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+  }
+  .menu__icon._active::before {
+    top: 50%;
+    left: 7px;
+    width: 15px;
+    transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon._active::after {
+    top: 50%;
+    left: 6px;
+    width: 15px;
+    transform: rotate(45deg) translate(0px, -50%);
+  }
+  /*----------------- style mobile menu --------------------------*/
+  .header__main .header__menu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    transform: translate(100%);
+    border: none;
+    border-radius: 0;
+    background: #fff;
+    height: 100vh;
+    left: 0;
+    top: 0;
+  }
+  .header__main .header__menu .menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+  }
+  .header__main .header__menu .menu__list .menu__link {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  
+
+}
+@media screen and (max-width: 768.98px) {
+  .head__images-desc {
+    display: none;
+  }
+  .head__images-mobile {
+    display: flex;
+  }
+  .block_container {
+    max-width: 100%;
+  }
+  .head__wrapper {
+    padding-top: 130px;
+  }
+  .head__description {
+    margin-top: 505px;
+  }
+  .content .image_height {
+    height: 300px;
+  }
+  .bottom__body {
+    padding: 40px 32px;
+  }
+  .bottom__body .bottom__title {
+    font-size: 24px;
+  }
+  .bottom__body p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480.98px) {
+  .head__title {
+    font-size: 24px;
+    text-align: center;
+  }
+  .head__description {
+    margin-top: 340px;
+  }
+  .content .image_height_2 {
+    height: 180px;
+  }
+  .our-prods .head__list-mob li:last-child {
+    margin-top: 30px;
+  }
+  .content .image_height {
+    height: 180px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

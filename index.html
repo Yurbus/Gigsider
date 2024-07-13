@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="img/favicon.svg">
+	<title>Paper trading</title>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/footer.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body class="home">
+	<header class="header header__main">
+		<div class="header__container">
+			<div class="header__body">
+				<div class="header__logo">
+					<a href="index.html"><img src="img/logo_white.svg" alt="Ptg logo"></a>
+				</div>
+				<div class="header__menu">
+					<ul id="menu" class="menu">
+						<li id="menu-item" class="menu-item"><a href="">About us</a></li>
+						<li id="menu-item" class="menu-item"><a href="">Services</a></li>
+						<li id="menu-item" class="menu-item"><a href="">Industries</a></li>
+						<li id="menu-item" class="menu-item"><a href="">Contact Us</a></li>
+					</ul>
+
+
+					<div class="header__button">
+						<a href="" class="contact_us">Contact</a>
+					</div>
+				</div>
+				<!----- mobile menu icon-------->
+				<div class="menu__icon">
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="wrapper">
+		
+
+		
+	</div>
+	
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__body">
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- <div class="koocies_container">
+		<div class="koocies">
+			<div class="koocies__wrapp">
+				<div class="koocies__left">
+					<img src="img/koocies.svg" alt="kookies">
+					<div class="koocies__text">
+						<span class="text__koocie">We use cookies to analyze our traffic.</span>
+						<a href="" class="link__koocie">Read cookies polices</a>	
+					</div>
+				</div>
+				<div class="koocies__right">
+					<div class="koocies__buttons">
+						<button class="koocie__btn btn__reject">Reject</button>
+						<button class="koocie__btn btn__accept">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+
+<!-- 
+	<div class="toUp">
+		<a href="" class="up_btn"><img src="img/up.svg" alt="icon"></a>
+		<style>
+			.toUp {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 20;
+			}
+		</style>
+	</div> -->
+	<!-------------------------- Popup ------------------------------>
+	<div id="popup" class="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="#" class="popup__close close-popup"><img src="img/close.svg" alt="close"></a>
+				<form action="#" id="form" class="form__contact">
+					<h4>Contact us</h4>
+					<span>Get in Touch with PTG SA/ELGRAF</span>
+					<div class="input__croup">
+						<input type="text" class="input_date _req" name="name" placeholder="Name">
+						<input type="text" class="input_date" name="lastName" placeholder="Second Name">
+					</div>
+					<input type="tel" id="phone_mask" class="input_date _req" name="phone" placeholder="Phone">
+					<input type="email" class="input_date _email _req" name="email" placeholder="Email">
+					<textarea class="input_date" name="message" cols="30" rows="7" placeholder="Type something"></textarea>
+					
+					<div class="bottom__action">
+						<div class="policy__check">
+							<input type="checkbox" id="policy" class="policy" name="interest" value="I confirm the processing of my personal data">
+							<label for="policy" class="policy__label">I confirm the processing of my <a href="#" target="_blank">personal data</a></label>
+						</div>
+						<button type="submit" class="contact__btn">Send</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div><!-- End popup -->
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="js/script.js"></script>
+	<script src="js/maskeinput.js"></script>
+	<script src="js/sendmail.js"></script>
+    <script src="js/popups.js"></script>
+	<script src="js/sw_slider.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+
+	<script>
+		//-------------------------------------------------------------------------------------------------
+		// Прокрутка чисел на странице 
+		function animateCountMob(element, targetValue, duration) {
+			$({ count: parseInt(element.text()) }).animate({ count: targetValue }, {
+				duration: duration,
+				step: function () {
+					element.text(Math.floor(this.count));
+				},
+				complete: function () {
+					element.text(targetValue);
+				}
+			});
+		}
+		function startCountAnimationMob() {
+			animateCount($('#years_mob'), 22, 2000); // Adjust duration as needed
+			animateCount($('#partners_mob'), 15, 2000);
+			animateCount($('#countries_mob'), 14, 2000);
+		}
+		// Trigger the counting animation when the document is ready
+		$(document).ready(function () {
+			startCountAnimationMob();
+		});
+	</script>
+</body>
+</html>
