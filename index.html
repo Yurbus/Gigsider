@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="img/favicon.png">
-	<title>Paper trading</title>
+	<title>GigSider</title>
 	
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/header.css">
@@ -38,7 +38,7 @@
 					</ul>
 					
 					<div class="header__button">
-						<a href="" class="book__demo accent_btn">Book demo</a>
+						<a href="#popup" class="book__demo accent_btn popup-link">Book demo</a>
 					</div>
 				</div>
 
@@ -68,6 +68,55 @@
 				</div>
 				<div class="hero__bg"><img src="img/main-bg.svg" alt=""></div>
 			</section>
+
+			<section class="operations">
+				<div class="operations__container">
+					<div class="operations__body">
+						<h2 class="operations__title">Transform Your Operations:</h2>
+						<div class="operations__items">
+							<div class="item__operations">
+								<div class="item__img"><img src="img/icon-search-code.svg" alt="icon"></div>
+								<h3 class="item__title">Process Review & Analysis </h3>
+								<p>Identify bottlenecks and inefficiencies to streamline operations.</p>
+							</div>
+							<div class="item__operations">
+								<div class="item__img"><img src="img/icon-pen.svg" alt="icon"></div>
+								<h3 class="item__title">Design and Usability Review</h3>
+								<p>Receive feedback from users in your  community.</p>
+							</div>
+							<div class="item__operations">
+								<div class="item__img"><img src="img/icon-flag.svg" alt="icon"></div>
+								<h3 class="item__title">Optimization Strategies</h3>
+								<p>Implement targeted improvements for maximum efficiency gains.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="sigsider">
+				<div class="sigsider__container">
+					<div class="sigsider__body">
+						<div class="sigsider__image">
+							<img src="img/second-main-img.png" alt="image">
+						</div>
+						<div class="sigsider__content">
+							<p class="sigsider__bold-text">GigSider is dedicated to enhancing organisational 
+								performance through crowdsourced process audits.
+							</p>
+							<p>From Automotive to healthcare to manufacturing, finance to retail, we specialize in adapting 
+								our methodologies to meet the specific needs of your industry.Help businesses like yours achieve 
+								operational excellence.
+							</p>
+							<div class="span__block">
+								<span class="blue-bg-text">Im a Siders looking to make some extra $$$</span>
+								<span class="yellow-bg-text">Im a business looking to improve operational efficiencies</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main>
 	</div>
 	
@@ -117,24 +166,56 @@
 	<div id="popup" class="popup">
 		<div class="popup__body">
 			<div class="popup__content">
-				<a href="#" class="popup__close close-popup"><img src="img/close.svg" alt="close"></a>
 				<form action="#" id="form" class="form__contact">
-					<h4>Contact us</h4>
-					<span>Get in Touch with PTG SA/ELGRAF</span>
-					<div class="input__croup">
-						<input type="text" class="input_date _req" name="name" placeholder="Name">
-						<input type="text" class="input_date" name="lastName" placeholder="Second Name">
+					<a href="#" class="popup__close close-popup"><img src="img/close.svg" alt="close"></a>
+					<div class="form__left">
+						<img src="img/form-photo.png" alt="image">
 					</div>
-					<input type="tel" id="phone_mask" class="input_date _req" name="phone" placeholder="Phone">
-					<input type="email" class="input_date _email _req" name="email" placeholder="Email">
-					<textarea class="input_date" name="message" cols="30" rows="7" placeholder="Type something"></textarea>
+					<div class="form_right">
+						<h4>Connect to us</h4>
+						<span>This feedback can highlight areas where improvements are needed, 
+							such as customer service, product quality, or operational efficiency.
+						</span>
+						<div class="input__croup">
+							<div class="label_wrap">
+								<label for="f_name">Name:</label>
+								<input  id="f_name" type="text" class="input_form _req" name="name" placeholder="Name" required>
+							</div>
+							<div class="label_wrap">
+								<label for="s_name">Surname:</label>
+								<input id="s_name" type="text" class="input_form" name="lastName" placeholder="Surname" required>
+							</div>
+						</div>
+<!-- 
+						<select class="select" name="select">
+							<option value="value1" selected>Im a Siders looking to make some extra $$$</option>
+							<option value="value2">Im a business looking to improve operational efficiencies</option>
+						</select> -->
+						<div class="custom-select-container">
+							<label for="select">Service:</label>
+							<select class="select">
+								<option value="value1" selected>Im a Siders looking to make some extra $$$</option>
+								<option value="value2">Im a business looking to improve operational efficiencies</option>
+							</select>
+							<div class="select-selected">Im a Siders looking to make some extra $$$</div>
+							<div class="select-items">
+								<div data-value="value1">Im a Siders looking to make some extra $$$</div>
+								<div data-value="value2">Im a business looking to improve operational efficiencies</div>
+							</div>
+						</div>
+
+						<label for="email">Email:</label>
+						<input id="email" type="email" class="input_form _email _req" name="email" placeholder="Email">
+						<label for="message">Message:</label>
+						<textarea id="message" class="input_form" name="message" cols="30" rows="7" placeholder="Message"></textarea>
 					
-					<div class="bottom__action">
-						<div class="policy__check">
+						<div class="bottom__action">
+						<!-- <div class="policy__check">
 							<input type="checkbox" id="policy" class="policy" name="interest" value="I confirm the processing of my personal data">
 							<label for="policy" class="policy__label">I confirm the processing of my <a href="#" target="_blank">personal data</a></label>
+						</div> -->
+							<button type="submit" class="accent_btn contact__btn">Submite</button>
 						</div>
-						<button type="submit" class="contact__btn">Send</button>
 					</div>
 				</form>
 			</div>
@@ -147,7 +228,32 @@
 	<script src="js/script.js"></script>
 	<script src="js/maskeinput.js"></script>
     <script src="js/popups.js"></script>
+	<script>
+        document.querySelector('.select-selected').addEventListener('click', function() {
+            this.classList.toggle('select-arrow-active');
+            document.querySelector('.select-items').style.display = 
+                document.querySelector('.select-items').style.display === 'block' ? 'none' : 'block';
+        });
 
+        document.querySelectorAll('.select-items div').forEach(function(item) {
+            item.addEventListener('click', function() {
+                let selectElement = document.querySelector('.select');
+                let selectedDiv = document.querySelector('.select-selected');
+                selectElement.value = this.getAttribute('data-value');
+                selectedDiv.innerText = this.innerText;
+                selectedDiv.classList.remove('select-arrow-active');
+                document.querySelector('.select-items').style.display = 'none';
+            });
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        document.addEventListener('click', function(event) {
+            if (!event.target.matches('.select-selected')) {
+                document.querySelector('.select-items').style.display = 'none';
+                document.querySelector('.select-selected').classList.remove('select-arrow-active');
+            }
+        });
+    </script>
 	<script>
 		//-------------------------------------------------------------------------------------------------
 		// Прокрутка чисел на странице 

@@ -6,7 +6,9 @@
 	--yellow-color: #FFB217;
 }
 
-
+body.lock .header {
+	padding-right: 17px;
+}
 /*---------------------------------------------------------------------------------------*/
 /*------------ Header style -------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------*/
@@ -98,8 +100,8 @@
 		height: 28px;
 		cursor: pointer;
 		position: absolute;
-		right: 18px;
-		top: 23px;
+		right: 10px;
+		top: 18px;
 		border-radius: 4px;
 		background: var(--blue-color);
 		span {
@@ -147,6 +149,13 @@
 	}
 	.header {
 		padding: 15px 0;
+		height: 64px;
+	}
+	.header__logo {
+		max-width: 120px;
+	}
+	.header__body {
+		grid-template-columns: 1fr;
 	}
 	/*----------------- style mobile menu --------------------------*/
 	.header__menu {
@@ -191,13 +200,13 @@
 
 }
 
-@media screen and (max-width:393.98px) {
+@media screen and (max-width:430.98px) {
 	.header__menu._active {
 		width: 100%;
 	}
 	.header__menu {
         width: 100%;
-        margin-top: 70px;
+        margin-top: 55px;
 		.menu {
 			margin-top: -70px;
 		}

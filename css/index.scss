@@ -109,7 +109,7 @@ html,body{
 	.hero__bg {
 		position: absolute;
 		width: 100%;
-		top: 0;
+		top: -300px;
 		left: 0;
 	}
 }
@@ -124,7 +124,7 @@ html,body{
 	z-index: 2;
 	.hero__title {
 		font-weight: 700;
-		font-size: clamp(28px, 4vw, 44px);
+		font-size: clamp(24px, 4vw, 44px);
 		line-height: 1.2;
 	}
 	.hero__buttons {
@@ -140,6 +140,96 @@ html,body{
 		border-radius: 32px;
 	}
 }
+
+/*--------------- operations ----------------------------*/
+
+.operations {
+	padding: 100px 0 50px;
+}
+.operations__body {
+}
+.operations__title {
+	font-weight: 700;
+	font-size: 32px;
+	text-align: center;
+	margin-bottom: 44px;
+}
+.operations__items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+.item__operations {
+	.item__img {
+		img {
+			width: 64px;
+		}
+	}
+	.item__title {
+		font-weight: 700;
+		font-size: 18px;
+		margin: 18px 0 10px;
+	}
+	p {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 1.2;
+	}	
+}
+
+/*--------------- sigsider ----------------------------*/
+
+.sigsider {
+	padding: 100px 0 50px;
+}
+.sigsider__body {
+	display: grid;
+	grid-template-columns: 50% 1fr;
+	align-items: center;
+	gap: 20px;
+}
+.sigsider__image {
+	img {
+		border-radius: 32px;
+	}
+}
+.sigsider__content {
+	.sigsider__bold-text {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 140%;
+		margin-bottom: 18px;
+	}
+	p {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 140%;
+		margin-bottom: 24px;
+	}
+	.span__block {
+		padding: 0 30px;
+		span {
+			font-weight: 700;
+			font-size: 16px;
+			padding: 22px 10px;
+			border-radius: 30px;
+			display: block;
+			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 24px;
+			}
+		}
+		.blue-bg-text {
+			background: var(--blue-color);
+			color: #fff;
+		}
+		.yellow-bg-text {
+			background: var(--yellow-color);
+		}	
+	}
+}
+
+
 
 
 
@@ -164,16 +254,51 @@ html,body{
 			height: 300px;
 		}
 	}
+	.sigsider__body {
+		grid-template-columns: 1fr;
+	}
+	.sigsider__image img {
+		height: 400px;
+	}
 }
 
 @media screen and (max-width:767.98px) {
 	.hero__body {
 		grid-template-columns: 1fr;
 	}
+	.operations__items {
+		grid-template-columns: 1fr 1fr;
+	}
+	.sigsider__content {
+		.sigsider__bold-text {
+			font-size: 20px;
+		}
+		p {
+			font-size: 16px;
+		}
+		.span__block {
+			padding: 0;
+			span {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
-@media screen and (max-width:639.98px) {
-
+@media screen and (max-width:430.98px) {
+	.hero {
+		padding: 130px 0 50px;
+	}
+	.operations__title {
+		font-size: 24px;
+		margin-bottom: 34px;
+	}
+	.operations__items {
+		grid-template-columns: 1fr;
+	}
+	.sigsider__image img {
+        height: 300px;
+    }
 }
 
 
